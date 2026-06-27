@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Hi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta property="og:title" content="Hi">
+    <meta property="og:description" content="Có một tin nhắn nhỏ muốn gửi đến bạn.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scene-bg">
+    <div class="sky-glow glow-1"></div>
+    <div class="sky-glow glow-2"></div>
+    <div class="sky-glow glow-3"></div>
+    <div id="floatingLayer"></div>
+</div>
+
+<section id="startScreen" class="screen active">
+    <div class="phone-shell intro-phone">
+        <div class="phone-head">
+            <span class="dot"></span>
+            <span class="dot small"></span>
+        </div>
+
+        <div class="notification">
+            <div class="rabbit-avatar">
+                <img src="assets/rabbit.gif" class="notif-rabbit" alt="rabbit">
+            </div>
+
+            <div class="noti-text">
+                <span class="noti-title">Chang có 1 tin nhắn mới</span>
+                <span class="noti-desc">Có một điều nhỏ muốn gửi đến Chang ✉️</span>
+            </div>
+        </div>
+
+        <div class="hello-area">
+            <div class="wave-hand">👋</div>
+            <h1>Chào Chang</h1>
+            <p>Có một câu hỏi nhỏ thôi, bấm vào lá thư để xem nha.</p>
+        </div>
+
+        <div id="envelopeBtn" class="envelope-scene" role="button" tabindex="0" aria-label="Mở thư">
+            <div class="mail-shadow"></div>
+            <div class="envelope-card">
+                <div class="letter-sheet">
+                    <div class="letter-line line-1"></div>
+                    <div class="letter-line line-2"></div>
+                    <div class="letter-line line-3"></div>
+                    <div class="letter-heart">♡</div>
+                </div>
+                <div class="env-back"></div>
+                <div class="env-left"></div>
+                <div class="env-right"></div>
+                <div class="env-bottom"></div>
+                <div class="env-flap"></div>
+                <div class="wax-seal">✦</div>
+            </div>
+            <div class="tap-mail">Bấm vào lá thư</div>
+        </div>
+    </div>
+</section>
+
+<section id="loadingScreen" class="screen">
+    <div class="phone-shell loading-phone">
+        <div class="message-top">
+            <b>Đang chuẩn bị...</b>
+        </div>
+
+        <div class="rabbit-world">
+            <div class="sun-soft"></div>
+            <div class="cloud cloud-a"></div>
+            <div class="cloud cloud-b"></div>
+            <div class="grass grass-1"></div>
+            <div class="grass grass-2"></div>
+
+            <div class="rabbit-runner" id="rabbitRunner">
+                <img src="assets/rabbit.gif" class="rabbit-gif" alt="rabbit">
+            </div>
+
+            <div class="ground-line"></div>
+        </div>
+
+        <div class="load-tube">
+            <div id="loadingFill" class="load-fill">
+                <span></span>
+            </div>
+        </div>
+        <div id="loadingText" class="loading-text">0%</div>
+    </div>
+</section>
+
+<section id="chatScreen" class="screen">
+    <div class="phone-shell chat-phone">
+        <div class="chat-header">
+            <div class="small-rabbit-head">🐰</div>
+            <div>
+                <b>Tin nhắn nhỏ</b>
+                <small>đang hoạt động</small>
+            </div>
+        </div>
+
+        <div id="chatBody" class="chat-body"></div>
+
+        <div id="answerArea" class="answer-area hidden-panel">
+            <button class="flower-choice" data-flower="Hoa hồng">
+                <span>🌹</span><b>Hoa hồng</b><small>Nhẹ nhàng và nổi bật</small>
+            </button>
+            <button class="flower-choice" data-flower="Hoa hướng dương">
+                <span>🌻</span><b>Hoa hướng dương</b><small>Rực rỡ như nắng</small>
+            </button>
+            <button class="flower-choice" data-flower="Hoa tulip">
+                <span>🌷</span><b>Hoa tulip</b><small>Xinh xắn và tinh tế</small>
+            </button>
+            <button class="flower-choice" data-flower="Hoa giấy">
+                <span>🌺</span><b>Hoa giấy</b><small>Mộc mạc nhưng rất đẹp</small>
+            </button>
+        </div>
+    </div>
+</section>
+
+<section id="videoScreen" class="screen video-screen">
+    <button id="backBtn" class="back-video">← chọn lại</button>
+    <video id="flowerVideo" playsinline controls></video>
+    <audio id="flowerMusic"></audio>
+
+    <button id="chooseBtn" class="select-video">Chọn hoa này</button>
+</section>
+
+<section id="thanksScreen" class="screen">
+    <div class="phone-shell chat-phone">
+        <div class="chat-header">
+            <div class="small-rabbit-head">🐰</div>
+            <div>
+                <b>Tin nhắn nhỏ</b>
+                <small>cảm ơn Chang</small>
+            </div>
+        </div>
+
+        <div class="chat-body thank-body">
+            <div class="bubble-msg left show">Cảm ơn Chang đã chọn nha 🌷</div>
+            <div class="bubble-msg left show delay1">Đây là lần đầu anh làm 1 cái web như này.</div>
+            <div class="bubble-msg left show delay2">Nếu như sau này anh làm những cái mới khác hơn nữa, mong Chang cũng sẽ vào xem, nhớ xem nha 🌼</div>
+        </div>
+
+        <div class="final-actions">
+            <button class="final-btn" data-reply="Xem">Xem</button>
+            <button class="final-btn soft" data-reply="Không">Không</button>
+        </div>
+    </div>
+</section>
+
+<section id="endScreen" class="screen">
+    <div class="phone-shell end-box">
+        <div class="end-icon">🌼</div>
+        <h2>Cảm ơn Chang nha</h2>
+        <p>Nhớ xem nha 🌼</p>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
