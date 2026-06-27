@@ -6,7 +6,7 @@ CHỖ DÁN LINK FORMSPREE:
 Ví dụ:
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/abcxyz";
 */
-const FORMSPREE_ENDPOINT = "DAN_LINK_FORMSPREE_CUA_BAN_VAO_DAY";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xaqgjnnr";
 
 const flowerData = {
     "Hoa hồng": { video: "hoahong.mp4", music: "nhachoahong.mp3", icon: "🌹", text: "Chang đã chọn hoa hồng" },
